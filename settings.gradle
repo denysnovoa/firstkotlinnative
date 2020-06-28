@@ -1,2 +1,4 @@
-include ':androidApp'
 rootProject.name = "FirstKotlinNative"
+
+include ':androidApp'
+include ':shared'
