@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430F0D9924A8C86A00FE9BAD /* shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430F0D9824A8C86A00FE9BAD /* shared.framework */; };
+		430F0D9A24A8C86A00FE9BAD /* shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 430F0D9824A8C86A00FE9BAD /* shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		715331823F53F97D41167AF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71533268778A2AFACC9526F6 /* Assets.xcassets */; };
 		715334935C5E830CEE2939FC /* firstkotlinnativeiosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71533DF0ECAFEDF3AF94A5AC /* firstkotlinnativeiosTests.swift */; };
 		715334AC9A33B9552908E0AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7153347336F7F681EBBA48C1 /* LaunchScreen.storyboard */; };
@@ -34,7 +36,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		430F0D9B24A8C86A00FE9BAD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				430F0D9A24A8C86A00FE9BAD /* shared.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		430F0D9824A8C86A00FE9BAD /* shared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = shared.framework; path = "../../shared/build/xcode-frameworks/shared.framework"; sourceTree = "<group>"; };
 		7153314E396AD15FEF40AE52 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		71533268778A2AFACC9526F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		715334F3AC9FAD349504E6AD /* firstkotlinnativeiosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = firstkotlinnativeiosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,12 +87,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430F0D9924A8C86A00FE9BAD /* shared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		430F0D9724A8C86A00FE9BAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				430F0D9824A8C86A00FE9BAD /* shared.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7153301F8B081B88A1C16EEE /* firstkotlinnativeiosTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +132,7 @@
 				715330B507F9CBA8D4EA2A6F /* firstkotlinnativeios */,
 				7153301F8B081B88A1C16EEE /* firstkotlinnativeiosTests */,
 				71533ACE675C2FE14B2999EC /* firstkotlinnativeiosUITests */,
+				430F0D9724A8C86A00FE9BAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,9 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 715333FFDB5171C859F1351F /* Build configuration list for PBXNativeTarget "firstkotlinnativeios" */;
 			buildPhases = (
+				430F0D9624A8C6B900FE9BAD /* ShellScript */,
 				7153303E8B1CADA8EC2AE79B /* Sources */,
 				71533F74A5E3C5309FA927F9 /* Frameworks */,
 				715334BFA6F9D0BF0FDB4155 /* Resources */,
+				430F0D9B24A8C86A00FE9BAD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -198,14 +227,16 @@
 		71533CF4E56AA197A5D73C17 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = Denys;
 			};
 			buildConfigurationList = 71533CCB3788B5C745A302CD /* Build configuration list for PBXProject "firstkotlinnativeios" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 71533448C5AF320CE64E016B;
 			productRefGroup = 715338EE3AFA38FE5E42C9BA /* Products */;
@@ -245,6 +276,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		430F0D9624A8C6B900FE9BAD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"$SRCROOT/../../shared/build/xcode-frameworks\"\n./gradlew :shared:build -PXCODE_CONFIGURATION=${CONFIGURATION}\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7153303E8B1CADA8EC2AE79B /* Sources */ = {
@@ -304,6 +355,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -334,8 +386,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/../../shared/build/xcode-frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -364,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -394,8 +449,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SRCROOT)/../../shared/build/xcode-frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -408,8 +465,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -508,6 +564,7 @@
 				71533790728492BF0C93467F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		715333FFDB5171C859F1351F /* Build configuration list for PBXNativeTarget "firstkotlinnativeios" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +573,7 @@
 				715339571E7F304F4A54A79B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		715335E45DEB9BBA1048465C /* Build configuration list for PBXNativeTarget "firstkotlinnativeiosTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +582,7 @@
 				715336CE3CF4C43D12160CF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		71533CCB3788B5C745A302CD /* Build configuration list for PBXProject "firstkotlinnativeios" */ = {
 			isa = XCConfigurationList;
