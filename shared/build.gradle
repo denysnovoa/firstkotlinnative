@@ -38,6 +38,9 @@ kotlin {
       implementation "io.ktor:ktor-client-json:$ktor_version"
       implementation "io.ktor:ktor-client-json-jvm:$ktor_version"
 
+      implementation "io.ktor:ktor-client-serialization:$ktor_version"
+      implementation "io.ktor:ktor-client-serialization-jvm:$ktor_version"
+
       implementation "io.ktor:ktor-client-json-native:$ktor_version"
     }
     androidMain.dependencies {

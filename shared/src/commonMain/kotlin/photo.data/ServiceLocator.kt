@@ -5,15 +5,17 @@ import com.app.firstkotlinnative.photo.data.api.PhotoApiService
 import com.app.firstkotlinnative.photo.data.model.PhotoResponse
 import io.ktor.client.HttpClient
 import io.ktor.client.features.json.JsonFeature
+import io.ktor.client.features.json.serializer.KotlinxSerializer
 
 object ServiceLocator {
 
   private fun provideHttpClient(): HttpClient {
+
     return HttpClient {
       install(JsonFeature) {
-//        serializer = KotlinxSerializer(JSON.nonstrict).apply {
-//          setMapper(PhotoResponse::class, PhotoResponse.serializer())
-//        }
+        serializer = KotlinxSerializer().apply {
+          setMapper(PhotoResponse::class, PhotoResponse.serializer())
+        }
       }
     }
   }
